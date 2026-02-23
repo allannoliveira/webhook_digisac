@@ -1,33 +1,51 @@
-🚀 Webhook Digisac → Google Chat
-Este projeto cria uma integração entre o Digisac e o Google Chat, enviando uma notificação visual (Card) sempre que um novo atendimento é iniciado.
 
-🎯 Objetivo
+# 🚀 Webhook Digisac → Google Chat
+
+Este projeto cria uma integração entre o **Digisac** e o **Google Chat**, enviando uma notificação visual (Card) sempre que um novo atendimento é iniciado.
+
+---
+
+## 🎯 Objetivo
+
 Notificar automaticamente no Google Chat quando:
 
-Um cliente iniciar uma conversa no Digisac
-O bot enviar a primeira mensagem automática
-A conexão for específica (ex: HELP DESK)
-🧠 Como Funciona
+- Um cliente iniciar uma conversa no Digisac
+- O bot enviar a primeira mensagem automática
+- A conexão for específica (ex: HELP DESK)
+
+---
+
+## 🧠 Como Funciona
+
 Fluxo da integração:
 
-Cliente envia mensagem
-↓
-Digisac cria ticket
-↓
-Bot responde automaticamente
-↓
-Webhook recebe message.created
-↓
-Sistema envia Card visual para Google Chat
+Cliente envia mensagem  
+↓  
+Digisac cria ticket  
+↓  
+Bot responde automaticamente  
+↓  
+Webhook recebe `message.created`  
+↓  
+Sistema envia Card visual para Google Chat  
 
-🔧 Tecnologias Utilizadas
-Python 3.x
-Flask
-Requests
-Ngrok (para ambiente local)
-Google Chat Webhook
-📦 Instalação
-1️⃣ Clone o projeto
+---
+
+## 🔧 Tecnologias Utilizadas
+
+- Python 3.x
+- Flask
+- Requests
+- Ngrok (para ambiente local)
+- Google Chat Webhook
+
+---
+
+## 📦 Instalação
+
+### 1️⃣ Clone o projeto
+
+```bash
 git clone https://seu-repositorio.git
 cd webhook-digisac
 2️⃣ Instale as dependências
