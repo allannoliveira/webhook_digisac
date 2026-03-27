@@ -10,6 +10,9 @@ SERVICE_ID_PERMITIDO = "0224d753-98a1-481a-968e-0cee6337c4f5"
 def webhook_digisac():
     payload = request.json
 
+    if not payload:
+        return jsonify({"status": "payload vazio"}), 400
+
     if payload.get("event") != "message.created":
         return jsonify({"status": "evento ignorado"}), 200
 
@@ -21,7 +24,6 @@ def webhook_digisac():
     if mensagem_data.get("isFromBot") is not True:
         return jsonify({"status": "não é bot"}), 200
 
-    # 🔥 Card visual
     card_payload = {
         "cardsV2": [
             {
@@ -65,5 +67,6 @@ def webhook_digisac():
 
     return jsonify({"status": "notificado"}), 200
 
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8080)
