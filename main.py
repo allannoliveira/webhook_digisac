@@ -46,7 +46,7 @@ def webhook_digisac():
                                                 "text": "Acessar Digisac",
                                                 "onClick": {
                                                     "openLink": {
-                                                        "url": "https://app.digisac.co"
+                                                        "url": "https://integralidademedica.digisac.co/"
                                                     }
                                                 }
                                             }
